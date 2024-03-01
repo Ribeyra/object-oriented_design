@@ -2,9 +2,9 @@ class Pirozhok:
     pass
 
 
-def to_Klass(data) -> Pirozhok:
+def to_Klass(data):
     object_ = Pirozhok()
-    object_.__dict__ = data
+    object_.__dict__.update(data)
     return object_
 
 
@@ -14,5 +14,6 @@ data = {
 }
 config = to_Klass(data)
 
-print(type(config))   # value
+print(type(config))
+print(config.key)   # value
 print(config.key2)  # value2
